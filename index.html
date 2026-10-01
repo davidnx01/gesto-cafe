@@ -1,0 +1,365 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>GESTO cafe&amp;brunch · raňajky, brunch a obedové menu v Košiciach — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu pre GESTO cafe&brunch, Námestie L. Novomeského 13, Košice — raňajky, obedové menu, káva a koláče.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --espresso:#1E140F; --roast:#3A271D; --crema:#9A5D36; --latte:#EADDCB; --foam:#F7EFE5; --gold:#E6BF4E; --ink:#1E140F; --ink-2:#6A574A;
+  --hair:rgba(30,20,15,.15); --hair-d:rgba(247,239,229,.16);
+  --sans:"Bricolage Grotesque",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--latte);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.lab{font:600 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+.num{font-variant-numeric:tabular-nums}
+.notice{background:#000;color:#E9DCCB;font-size:13px;line-height:1.45;padding:9px 16px;text-align:center}
+
+/* dark top */
+.dark{background:var(--espresso);color:var(--foam)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--hair-d)}
+.top .logo img{width:150px;mix-blend-mode:lighten}
+.top nav{display:flex;align-items:center;gap:28px}
+.top nav a{text-decoration:none;font-weight:500;font-size:15px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s;padding:6px 0}
+.top nav a:hover{background-size:100% 1px}
+.top nav a.tel{color:var(--gold);font-weight:600}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:56px 0 76px;min-height:min(600px,82vh)}
+.hero .lab{color:var(--gold);margin:0 0 20px}
+h1{font:400 clamp(44px,5.8vw,82px)/.98 var(--serif);letter-spacing:-.01em;margin:0 0 24px}
+h1 em{color:var(--gold)}
+.hero p.src{font-size:18px;line-height:1.5;color:#D8C9B8;max-width:31em;margin:0 0 32px}
+.hero p.src small{display:block;font-size:13px;color:#A8978A;margin-top:6px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;border:1.5px solid currentColor;transition:background .2s,color .2s,border-color .2s}
+.btn-gold{background:var(--gold);border-color:var(--gold);color:var(--espresso)}
+.btn-gold:hover{background:var(--foam);border-color:var(--foam)}
+.dark .btn-line:hover{background:var(--foam);color:var(--espresso);border-color:var(--foam)}
+.facts{display:flex;flex-wrap:wrap;gap:14px 34px;margin:40px 0 0;padding-top:22px;border-top:1px solid var(--hair-d)}
+.facts dt{font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#A8978A}
+.facts dd{margin:4px 0 0;font:400 26px/1.1 var(--serif)}
+.cupwrap{position:relative;justify-self:center;width:min(480px,100%)}
+.cup{width:100%;height:auto;display:block}
+.cupwrap figcaption{text-align:center;font-size:13px;color:#A8978A;margin-top:10px}
+
+/* menu */
+.menu{background:var(--gold);color:var(--espresso);padding:84px 0 92px}
+.menu-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:34px}
+.menu-head h2{font:400 clamp(44px,6vw,84px)/.95 var(--serif);margin:8px 0 0}
+.menu-head h2 em{font-style:italic}
+.menu-head p{margin:0;max-width:30em;font-size:15px}
+.soup{display:inline-flex;align-items:center;gap:14px;background:var(--espresso);color:var(--foam);border-radius:999px;padding:8px 22px 8px 8px}
+.soup b{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;background:var(--foam);color:var(--espresso);font:400 28px/1 var(--serif)}
+.soup span{font-size:14px;line-height:1.3}
+.menu-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:start}
+.days{background:var(--foam);border-radius:28px;padding:26px 30px 30px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.tabs button{flex:1 1 0;min-width:56px;min-height:58px;border-radius:999px;border:1.5px solid var(--espresso);background:transparent;color:var(--espresso);font:600 15px/1.1 var(--sans);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:background .2s,color .2s}
+.tabs button small{font-weight:400;font-size:12px;opacity:.75}
+.tabs button:hover{background:rgba(30,20,15,.08)}
+.tabs button[aria-selected=true]{background:var(--espresso);color:var(--foam)}
+.dish{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:18px 0;border-top:1px solid var(--hair)}
+.dish:first-of-type{border-top:0;padding-top:4px}
+.dish .k{grid-column:1/-1;font:600 11px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--crema)}
+.dish h3{font:400 32px/1.05 var(--serif);margin:0}
+.dish p{grid-column:1;margin:0;font-size:15px;color:var(--ink-2);max-width:36em}
+.dish .pr{grid-column:2;grid-row:2/span 2;align-self:start;text-align:right;font:600 24px/1 var(--sans);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dish .pr small{display:block;font:400 12px/1.4 var(--sans);color:var(--ink-2);margin-top:4px}
+[role=tabpanel][hidden]{display:none}
+.week{background:var(--espresso);color:var(--foam);border-radius:28px;padding:28px 30px 30px}
+.week .lab{color:var(--gold);margin:0 0 6px}
+.week h3.t{font:400 36px/1 var(--serif);margin:0 0 10px}
+.week .dish{border-color:var(--hair-d)}
+.week .dish .k{color:var(--gold)}
+.week .dish h3{font-size:26px}
+.week .dish p{color:#C9B8A7}
+.week .dish .pr small{color:#A8978A}
+.menu-note{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--hair);font-size:13px;color:var(--ink-2)}
+.soupd{border-top:1px solid var(--hair)!important;margin-top:8px;padding-top:18px!important}
+.soupd h3{font-size:24px!important}
+.days [role=tabpanel] .dish h3{font-size:40px}
+
+/* kolace */
+.kolace{padding:96px 0;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.kolace .lab{color:var(--crema);margin:0 0 14px}
+.kolace h2{font:400 clamp(40px,5vw,68px)/1 var(--serif);margin:0 0 20px}
+.kolace h2 em{color:var(--crema)}
+.kolace p{margin:0 0 14px;color:var(--ink-2);max-width:30em}
+.plates{display:flex;gap:26px;align-items:center;justify-content:center}
+.plate{margin:0;background:var(--foam);padding:14px;border-radius:50%;box-shadow:0 0 0 1px var(--hair)}
+.plate div{overflow:hidden;border-radius:50%}
+.plate img{width:100%;transition:transform .5s}
+.plate:hover img{transform:scale(1.045)}
+.plate.round{width:min(330px,56vw)}
+.plate.long{width:min(190px,32vw);border-radius:999px;padding:12px}
+.plate.long div{border-radius:999px}
+.plate.long img{aspect-ratio:282/560;object-fit:cover}
+.pcap{font-size:13px;color:var(--ink-2);margin-top:4px}
+
+/* rating */
+.rating{background:var(--foam);border-block:1px solid var(--hair);padding:64px 0}
+.r-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center}
+.ring{width:210px;height:210px;border-radius:50%;border:12px solid var(--espresso);box-shadow:inset 0 0 0 6px var(--foam),inset 0 0 0 200px var(--crema);display:grid;place-items:center;color:var(--foam);text-align:center}
+.ring b{font:400 76px/1 var(--serif);display:block}
+.ring span{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.r-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.r-list div{border-top:1.5px solid var(--espresso);padding-top:14px}
+.r-list dt{font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.r-list dd{margin:6px 0 0;font:400 34px/1.1 var(--serif)}
+.r-list dd small{display:block;font:400 14px/1.4 var(--sans);color:var(--ink-2)}
+.r-note{grid-column:1/-1;margin:0;font-size:13px;color:var(--ink-2)}
+
+/* kontakt */
+.kontakt{padding:88px 0 96px}
+.k-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.kontakt .lab{color:var(--crema);margin:0 0 14px}
+.kontakt h2{font:400 clamp(40px,5vw,64px)/1 var(--serif);margin:0 0 22px}
+.kontakt address{font:500 22px/1.4 var(--sans);font-style:normal;margin:0 0 18px}
+.links{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:10px}
+.links a{text-decoration:none;font-size:17px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s}
+.links a:hover{background-size:100% 1px}
+.kontakt .btn{border-color:var(--espresso)}
+.kontakt .btn-dark{background:var(--espresso);color:var(--foam)}
+.kontakt .btn-dark:hover{background:var(--crema);border-color:var(--crema)}
+.kontakt .btn-line:hover{background:var(--espresso);color:var(--foam)}
+.hours{width:100%;border-collapse:collapse;font-size:17px}
+.hours th,.hours td{text-align:left;padding:12px 0;border-bottom:1px solid var(--hair);font-weight:400}
+.hours td{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.hours caption{text-align:left;font:400 30px/1.1 var(--serif);padding-bottom:12px}
+.hours sup{color:var(--crema)}
+.h-note{font-size:14px;color:var(--ink-2);margin:14px 0 0}
+.extras{margin:26px 0 0;padding:18px 20px;border-radius:18px;background:var(--foam);font-size:15px}
+.extras b{display:block;font:600 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:6px}
+
+footer{background:#000;color:#A8978A;font-size:13px;padding:24px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{text-decoration:none}
+.mbar{display:none}
+
+@media (max-width:960px){
+  .hero,.menu-grid,.kolace,.k-grid{grid-template-columns:1fr;gap:36px}
+  .hero{min-height:0;padding:40px 0 60px}
+  .cupwrap{width:min(400px,100%)}
+  .r-grid{grid-template-columns:1fr;justify-items:start}
+  .top nav a:not(.tel){display:none}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .top .logo img{width:118px}
+  h1{font-size:46px}
+  .hero p.src{font-size:17px}
+  .ctas .btn{flex:1 1 100%}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .menu{padding:60px 0 68px}
+  .days,.week{padding:20px 18px 22px;border-radius:22px}
+  .tabs{gap:5px}
+  .tabs button{min-width:0;font-size:14px}
+  .dish h3{font-size:27px}
+  .days [role=tabpanel] .dish h3{font-size:30px}
+  .week .dish h3{font-size:23px}
+  .dish .pr{font-size:20px}
+  .kolace{padding:64px 0}
+  .plates{gap:14px}
+  .ring{width:170px;height:170px}
+  .ring b{font-size:60px}
+  .r-list{grid-template-columns:1fr;gap:16px}
+  .kontakt{padding:64px 0 72px}
+  footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:10;background:var(--espresso);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:999px;font:600 15px/1 var(--sans);text-decoration:none;color:var(--foam);border:1.5px solid rgba(247,239,229,.4)}
+  .mbar a:first-child{background:var(--gold);border-color:var(--gold);color:var(--espresso)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="notice">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<div class="dark">
+<header class="wrap top">
+  <a class="logo" href="#" aria-label="GESTO cafe&amp;brunch — úvod"><img src="assets/gesto-logo.webp" width="440" height="220" alt="Logo GESTO cafe&amp;brunch"></a>
+  <nav aria-label="Hlavná navigácia">
+    <a href="#menu">Menu týždňa</a>
+    <a href="#kolace">Koláče</a>
+    <a href="#kontakt">Kontakt a hodiny</a>
+    <a class="tel num" href="tel:+421945454549">0945 454 549</a>
+  </nav>
+</header>
+
+<section class="wrap hero">
+  <div>
+    <p class="lab">Kaviareň a brunch · Košice</p>
+    <h1>Skvelé raňajky, poctivé <em>obedové menu</em>, delikátna večera</h1>
+    <p class="src">„…v príjemných a útulných priestoroch reštaurácie a kaviarne v blízkosti centra mesta.“<small>GESTO cafe&amp;brunch o sebe na Facebooku</small></p>
+    <div class="ctas">
+      <a class="btn btn-gold num" href="tel:+421945454549">Zavolať 0945 454 549</a>
+      <a class="btn btn-line" href="#menu">Menu tohto týždňa</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Google</dt><dd class="num">4,5 ★ <small style="font:400 14px var(--sans);color:#A8978A">1 186 hodnotení</small></dd></div>
+      <div><dt>Adresa</dt><dd>Nám. L. Novomeského 13</dd></div>
+    </dl>
+  </div>
+  <figure class="cupwrap" style="margin-block:0">
+<svg class="cup" viewBox="0 0 500 500" role="img" aria-label="Šálka kávy zhora s latte art v tvare rosetty">
+<defs><radialGradient id="cr" cx="50%" cy="46%" r="52%"><stop offset="0" stop-color="#B57745"/><stop offset=".62" stop-color="#8E5330"/><stop offset=".9" stop-color="#6B3B20"/><stop offset="1" stop-color="#C79A6C"/></radialGradient>
+<path id="ring" d="M250 250m-226 0a226 226 0 1 1 452 0a226 226 0 1 1 -452 0"/></defs>
+<circle cx="250" cy="250" r="246" fill="#F4ECE2"/>
+<circle cx="250" cy="250" r="246" fill="none" stroke="#1E140F" stroke-opacity=".12"/>
+<text font-family="Bricolage Grotesque, sans-serif" font-size="13" font-weight="600" letter-spacing="5.2" fill="#1E140F" fill-opacity=".55"><textPath href="#ring">GESTO · CAFE&amp;BRUNCH · NÁMESTIE L. NOVOMESKÉHO 13 · KOŠICE · GESTO · CAFE&amp;BRUNCH ·</textPath></text>
+<circle cx="250" cy="250" r="205" fill="#FFFFFF"/>
+<circle cx="250" cy="250" r="205" fill="none" stroke="#1E140F" stroke-opacity=".1"/>
+<circle cx="250" cy="250" r="186" fill="url(#cr)"/>
+<g fill="#F7EEE3" stroke="#9A5D36" stroke-width="1.3"><path d="M250 156C208 130 218 98 250 115C282 98 292 130 250 156Z"/><path d="M220.0 139.4C229.0 162.8 242.5 164.0 250 164.0C257.5 164.0 271.0 162.8 280.0 139.4C268.0 146.0 257.5 141.2 250 141.2C242.5 141.2 232.0 146.0 220.0 139.4Z"/><path d="M200.1 151.0C215.1 183.2 237.5 184.5 250 184.5C262.5 184.5 284.9 183.2 299.9 151.0C280.0 165.8 262.5 160.8 250 160.8C237.5 160.8 220.0 165.8 200.1 151.0Z"/><path d="M186.5 165.3C205.6 203.7 234.1 205.0 250 205.0C265.9 205.0 294.4 203.7 313.5 165.3C288.1 185.5 265.9 180.3 250 180.3C234.1 180.3 211.9 185.5 186.5 165.3Z"/><path d="M174.6 180.3C197.2 224.2 231.1 225.5 250 225.5C268.9 225.5 302.8 224.2 325.4 180.3C295.2 205.2 268.9 199.8 250 199.8C231.1 199.8 204.8 205.2 174.6 180.3Z"/><path d="M163.7 195.7C189.6 244.6 228.4 246.0 250 246.0C271.6 246.0 310.4 244.6 336.3 195.7C301.8 225.0 271.6 219.4 250 219.4C228.4 219.4 198.2 225.0 163.7 195.7Z"/><path d="M153.4 211.4C182.4 265.1 225.9 266.5 250 266.5C274.1 266.5 317.6 265.1 346.6 211.4C308.0 244.8 274.1 238.9 250 238.9C225.9 238.9 192.0 244.8 153.4 211.4Z"/><path d="M143.6 227.3C175.6 285.5 223.4 287.0 250 287.0C276.6 287.0 324.4 285.5 356.4 227.3C313.8 264.5 276.6 258.5 250 258.5C223.4 258.5 186.2 264.5 143.6 227.3Z"/><path d="M134.3 243.4C169.0 305.9 221.1 307.5 250 307.5C278.9 307.5 331.0 305.9 365.7 243.4C319.4 284.2 278.9 278.1 250 278.1C221.1 278.1 180.6 284.2 134.3 243.4Z"/><path d="M125.3 259.6C162.7 326.4 218.8 328.0 250 328.0C281.2 328.0 337.3 326.4 374.7 259.6C324.8 304.0 281.2 297.6 250 297.6C218.8 297.6 175.2 304.0 125.3 259.6Z"/><path d="M116.5 275.9C156.6 346.9 216.6 348.5 250 348.5C283.4 348.5 343.4 346.9 383.5 275.9C330.1 323.8 283.4 317.1 250 317.1C216.6 317.1 169.9 323.8 116.5 275.9Z"/><path d="M108.0 292.4C150.6 367.3 214.5 369.0 250 369.0C285.5 369.0 349.4 367.3 392.0 292.4C335.2 343.5 285.5 336.7 250 336.7C214.5 336.7 164.8 343.5 108.0 292.4Z"/></g>
+<path d="M248 104L252 104L250.7 392L249.3 392Z" fill="#9A5D36"/>
+</svg>
+    <figcaption>Latte art rosetta — ilustrácia návrhu</figcaption>
+  </figure>
+</section>
+</div>
+
+<main>
+<section class="menu" id="menu" aria-labelledby="h-menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <p class="lab">Obedové menu · 28. 9. – 2. 10. 2026</p>
+        <h2 id="h-menu">Menu <em>týždňa</em></h2>
+      </div>
+      <div class="soup"><b class="num">1 €</b><span>Polievka podľa dennej ponuky<br>0,3 l ku každému dňu</span></div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="days">
+        <div class="tabs" role="tablist" aria-label="Dni v týždni">
+          <button role="tab" id="t1" data-dow="1" aria-controls="d1" aria-selected="true">Po<small class="num">28. 9.</small></button>
+          <button role="tab" id="t2" data-dow="2" aria-controls="d2" aria-selected="false">Ut<small class="num">29. 9.</small></button>
+          <button role="tab" id="t3" data-dow="3" aria-controls="d3" aria-selected="false">St<small class="num">30. 9.</small></button>
+          <button role="tab" id="t4" data-dow="4" aria-controls="d4" aria-selected="false">Št<small class="num">1. 10.</small></button>
+          <button role="tab" id="t5" data-dow="5" aria-controls="d5" aria-selected="false">Pi<small class="num">2. 10.</small></button>
+        </div>
+        <div role="tabpanel" id="d1" aria-labelledby="t1">
+          <div class="dish"><span class="k">Pondelok · Menu 1</span><h3>Linguini bolognese</h3><p>pomaly varená hovädzia bolonská omáčka, cestoviny linguini, parmezánový krém, chrumkavý parmezán a pečené cherry paradajky</p><span class="pr num">9,90 €<small>350 g</small></span></div>
+        </div>
+        <div role="tabpanel" id="d2" aria-labelledby="t2" hidden>
+          <div class="dish"><span class="k">Utorok · Menu 1</span><h3>Kurací stroganov</h3><p>jemné kuracie kúsky v krémovej šampiňónovo-paprikovej omáčke, podávané s jazmínovou ryžou, chrumkavými hranolkami a čerstvou petržlenovou vňaťou</p><span class="pr num">10,90 €<small>350 g</small></span></div>
+        </div>
+        <div role="tabpanel" id="d3" aria-labelledby="t3" hidden>
+          <div class="dish"><span class="k">Streda · Menu 1</span><h3>Chrumkavé mini bravčové kolienko</h3><p>pomaly pečené mini bravčové kolienko s chrumkavou kožou, krémovou zemiakovou kašou, pečenou sezónnou zeleninou a bohatou omáčkou z červeného vína</p><span class="pr num">10,90 €<small>350 g</small></span></div>
+        </div>
+        <div role="tabpanel" id="d4" aria-labelledby="t4" hidden>
+          <div class="dish"><span class="k">Štvrtok · Menu 1</span><h3>Penne s pestom a kuracím mäsom</h3><p>cestoviny penne s čerstvým bazalkovým pestom, šťavnatými kúskami kuracieho mäsa, cherry paradajkami a hoblinkami parmezánu</p><span class="pr num">9,90 €<small>350 g</small></span></div>
+        </div>
+        <div role="tabpanel" id="d5" aria-labelledby="t5" hidden>
+          <div class="dish"><span class="k">Piatok · Menu 1</span><h3>Milánske rizoto s grilovanými krevetami</h3><p>krémové šafranové rizoto s grilovanými krevetami, parmezánom, maslom, bielym vínom, čerstvými bylinkami a citrónom</p><span class="pr num">10,90 €<small>350 g</small></span></div>
+        </div>
+        <div class="dish soupd"><span class="k">Každý deň</span><h3>Polievka podľa dennej ponuky</h3><span class="pr num">1,00 €<small>0,3 l</small></span></div>
+        <p class="menu-note">Ukážka návrhu: menu je prepísané z plagátu „Denné menu“ na FB stránke GESTO (týždeň 28. 9. – 2. 10. 2026), ceny podľa plagátu — overiť. Menu 4 podľa anglickej verzie plagátu. Alergény uvádza plagát. Na hotovom webe by sa menu menilo každý týždeň a dnešný deň by sa otvoril sám.</p>
+      </div>
+
+      <div class="week">
+        <p class="lab">Celý týždeň</p>
+        <h3 class="t">Týždenné menu</h3>
+        <div class="dish"><span class="k">Menu 2</span><h3>Burrito bowl</h3><p>ochutené hovädzie mäso, jazmínová ryža, čierna fazuľa, kukurica, pico de gallo, guacamole, čedar, kyslá smotana a chrumkavé tortilla chipsy</p><span class="pr num">10,90 €<small>350 g</small></span></div>
+        <div class="dish"><span class="k">Menu 3</span><h3>Chicken katsu curry bowl</h3><p>chrumkavé kuracie mäso v panko strúhanke, jazmínová ryža, japonská kari omáčka, edamame, nakladaná červená cibuľa, jarná cibuľka a sezam</p><span class="pr num">10,90 €<small>350 g</small></span></div>
+        <div class="dish"><span class="k">Menu 4</span><h3>Mediterranean pasta salad bowl</h3><p>fusilli, cherry paradajky, uhorka, červená cibuľa, zelené olivy, feta, mix šalátov, petržlen a citrónovo-dijonský dresing</p><span class="pr num">9,90 €<small>350 g</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap kolace" id="kolace" aria-labelledby="h-kolace">
+  <div>
+    <p class="lab">Z ich titulnej fotky</p>
+    <h2 id="h-kolace">Domáce koláče <em>a dezerty</em></h2>
+    <p>Takto sa GESTO predstavuje na svojej titulnej fotke na Facebooku.</p>
+    <p>Na FB spomínajú aj „našu cukráreň GESTO gelato&amp;pastry“.</p>
+    <p class="pcap">Fotky: titulná fotka FB stránky GESTO cafe&amp;brunch (výrez).</p>
+  </div>
+  <div class="plates">
+    <figure class="plate round"><div><img src="assets/domace-kolace-brownie.webp" width="405" height="405" loading="lazy" alt="Čokoládový koláč na papieri na bielom tanieri"></div></figure>
+    <figure class="plate long"><div><img src="assets/domace-kolace-mandlovy.webp" width="282" height="647" loading="lazy" alt="Pečivo posypané mandľovými lupienkami a cukrom"></div></figure>
+  </div>
+</section>
+
+<section class="rating" aria-labelledby="h-rating">
+  <div class="wrap r-grid">
+    <div class="ring"><div><b class="num">4,5</b><span>Google ★</span></div></div>
+    <div>
+      <h2 id="h-rating" class="lab" style="margin:0 0 18px;color:var(--ink-2)">Hodnotenia hostí</h2>
+      <dl class="r-list">
+        <div><dt>Google</dt><dd class="num">4,5 / 5<small>1 186 hodnotení</small></dd></div>
+        <div><dt>Facebook</dt><dd class="num">86 %<small>odporúča · 244 recenzií</small></dd></div>
+        <div><dt>Tripadvisor</dt><dd class="num">4,1 / 5<small>34 hodnotení</small></dd></div>
+      </dl>
+      <p class="r-note" style="margin-top:18px">Google a Tripadvisor podľa Wanderlog, Facebook podľa ich FB stránky (1. 10. 2026).</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap kontakt" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="k-grid">
+    <div>
+      <p class="lab">Kontakt</p>
+      <h2 id="h-kontakt">Príďte na kávu</h2>
+      <address>Námestie L. Novomeského 13<br>040 01 Košice</address>
+      <ul class="links">
+        <li><a class="num" href="tel:+421945454549">0945 454 549</a></li>
+        <li><a href="https://www.facebook.com/gestocafebrunch/" rel="noopener">Facebook · GESTO cafe&amp;brunch</a></li>
+        <li><a href="https://www.instagram.com/gesto_cafe_brunch/" rel="noopener">Instagram · @gesto_cafe_brunch</a></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-dark" href="tel:+421945454549">Zavolať</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=GESTO+cafe%26brunch+N%C3%A1mestie+L.+Novomesk%C3%A9ho+13+Ko%C5%A1ice" rel="noopener">Navigovať</a>
+      </div>
+      <div class="extras"><b>Podľa FB a Wanderlog</b>Posedenie vnútri aj vonku, vyzdvihnutie objednávky pri prevádzke · detský kútik (overiť)</div>
+    </div>
+    <div>
+      <table class="hours">
+        <caption>Otváracie hodiny</caption>
+        <tr><th scope="row">Pondelok – štvrtok</th><td>7:00 – 22:00</td></tr>
+        <tr><th scope="row">Piatok</th><td>7:00 – 23:00<sup>*</sup></td></tr>
+        <tr><th scope="row">Sobota</th><td>8:00 – 23:00<sup>*</sup></td></tr>
+        <tr><th scope="row">Nedeľa</th><td>9:00 – 21:00</td></tr>
+      </table>
+      <p class="h-note">Hodiny podľa obedvmeste.sk a near-place (1. 10. 2026) — overiť. <sup>*</sup> Wanderlog uvádza v piatok a sobotu do 22:00.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Neoficiálny návrh webu · webdavid.sk · 2026</span><a href="#">Hore ↑</a></div></footer>
+
+<nav class="mbar" aria-label="Rýchle akcie">
+  <a href="tel:+421945454549">Zavolať</a>
+  <a href="#menu">Menu týždňa</a>
+</nav>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[data-dow][aria-controls]'));
+  function pick(btn){
+    tabs.forEach(function(b){
+      var on=b===btn; b.setAttribute('aria-selected',on?'true':'false'); b.tabIndex=on?0:-1;
+      document.getElementById(b.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){pick(b)});
+    b.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(d){var n=tabs[(i+d+tabs.length)%tabs.length];pick(n);n.focus();e.preventDefault();}
+    });
+  });
+  var dow=1;
+  try{dow={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:0}[new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Bratislava',weekday:'short'}).format(new Date())];}catch(e){dow=new Date().getDay();}
+  var t=tabs.filter(function(b){return +b.dataset.dow===dow})[0]||tabs[0];
+  pick(t);
+})();
+</script>
